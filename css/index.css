@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    display: block;
+}
+p a{
+    display: inline;
+}
+img , picture , video , iframe , svg {
+    display: block;
+    width: 100%;
+    height: initial;
+}
+svg{
+    fill: currentColor;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+form , input , label , select , option , textarea , button{
+    font-size: inherit;
+    font-family: inherit;
+    display: block;
+    line-height: inherit;
+    background-color: transparent;
+}
+:root{
+    font-size: 100%;
+
+    /* Color */
+    --color-primary: white;
+
+    /* Tipografías */
+    --font-primary : Helvetica, Arial;
+    
+    /* Espacios */
+    --margin-primary: 0 0 1rem;
+
+    
+}
+body{
+    font-family: var(--font-primary) ;
+}
+
+
+
+
+
+
+.Header{
+    width: 100%;
+    background-color: #F29400;
+    position: relative;
+}
+
+.Header-h1{
+    width: 100%;
+    background-color: #F29400;
+    min-height: 4.125rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 26.5625rem;
+    color: white;
+    font-size: 1.3em;
+    font-weight:800;
+    letter-spacing: 0.5px;
+
+    
+}
+
+.Header-nav{
+    width: 100%;
+    background: rgb(225,226,227);
+    background: linear-gradient(0deg, rgba(225,226,227,1) 17%, rgba(182,184,185,1) 79%);
+    display: flex;
+    flex-flow: column;
+    min-height: 2.8125rem;
+    
+}
+
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 27rem;
+    gap: 3.125rem;
+    margin: auto 0;
+    font-size: .88em;
+    
+}
+.Header-li{
+    display: flex;
+    color: #666668;
+}
+
+.Header-li:nth-child(1)::after,
+.Header-li:nth-child(2)::after,
+.Header-li:nth-child(4)::after {
+    content: ">";
+    transform: rotate(90deg);
+    font-size: 12px; 
+    margin-left: 5px; 
+    color: #666668; 
+    font-weight: bold;
+    font-size: 1em;
+}
+
+@media (max-width: 1300px){
+    .Header-h1 , .Header-ul{
+        padding: 0 0 0 10rem;
+    }
+}
+
+@media (max-width: 1000px){
+    .Header-ul{
+        display: none;
+    }
+    .Header-h1{
+        padding:1rem;
+    }
+}
