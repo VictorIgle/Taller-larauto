@@ -44,6 +44,9 @@ form , input , label , select , option , textarea , button{
 
     /* Color */
     --color-primary: white;
+    --color-hover:#F29400;
+    --bg-hover:#ED6600;
+    --bg-color:#F29400;
 
     /* Tipografías */
     --font-primary : Helvetica, Arial;
@@ -64,19 +67,19 @@ body{
 
 .Header{
     width: 100%;
-    background-color: #F29400;
+    background-color: var(--bg-color);
     position: relative;
 }
 
 .Header-h1{
     width: 100%;
-    background-color: #F29400;
+    background-color: var(--bg-color);
     min-height: 4.125rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 0 0 26.5625rem;
-    color: white;
+    padding: 0 0 0 calc((427 / 2047) * 100%);
+    color: var(--color-primary);
     font-size: 1.3em;
     font-weight:800;
     letter-spacing: 0.5px;
@@ -99,16 +102,19 @@ body{
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 0 0 27rem;
-    gap: 3.125rem;
+    padding: 0 0 0 calc((440 / 2047) * 100%);
+    gap: 1rem;
     margin: auto 0;
     font-size: .88em;
     
 }
 .Header-li{
     display: flex;
+    padding: .5rem 1rem;
     color: #666668;
+    cursor: pointer;
 }
+
 
 .Header-li:nth-child(1)::after,
 .Header-li:nth-child(2)::after,
@@ -120,6 +126,14 @@ body{
     color: #666668; 
     font-weight: bold;
     font-size: 1em;
+}
+
+.Header-li:hover{
+    background-color: var(--bg-hover);
+    color: var(--bg-color);
+}
+.Header-li:hover::after{
+    color:var(--bg-color);
 }
 
 .Slider{
@@ -195,7 +209,7 @@ body{
 
 
 .Slider-btn.isActive{
-    background-color: white;
+    background-color: var(--color-primary);
 }
 
 
@@ -206,12 +220,6 @@ body{
 
 
 
-
-@media (max-width: 1300px){
-    .Header-h1 , .Header-ul{
-        padding: 0 0 0 10rem;
-    }
-}
 
 @media (max-width: 1000px){
     .Header-ul{
