@@ -168,10 +168,10 @@ body{
 }
 
 .Slider-arrow--next{
-    right:8.9375rem;
+    right: calc((157 / 2047) * 100%);
 }
 .Slider-arrow--prev{
-    left:8.9375rem;
+    left:calc((157 / 2047) * 100%);
 }
 
 .Slider-ul{
@@ -222,21 +222,11 @@ body{
     }
 }
 
-@media (max-width: 900px){
-    .Slider-arrow--next{
-        right:4rem;
-    }
-    .Slider-arrow--prev{
-        left:4rem;
+@media (max-width:600px){
+    .Slider-ul{
+        bottom: .5rem;
     }
 }
 
-@media (max-width: 480px){
-    .Slider-arrow--next{
-        right:1rem;
-    }
-    .Slider-arrow--prev{
-        left:1rem;
-    }
-}
+
 

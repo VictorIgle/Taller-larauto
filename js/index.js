@@ -5,40 +5,64 @@ const sliderNext = document.querySelector('.Slider-arrow--next')
 const sliderPrev = document.querySelector('.Slider-arrow--prev')
 const sliderBtn = document.querySelectorAll('.Slider-btn')
 const sliderImg = document.querySelectorAll('.Slider-img')
-
-
+const slider = document.querySelector('.Slider')
 
 let img = 0
 
-let imagenVisible = ()=>{
-    sliderImg.forEach(( eachImg , i)=>{
+//actualizar la imagen visible
+let imagenVisible = () => {
+    sliderImg.forEach((eachImg, i) => {
         sliderImg[i].classList.remove('isVisible')
         sliderBtn[i].classList.remove('isActive')
     })
 
-        sliderImg[img].classList.add('isVisible')
-        sliderBtn[img].classList.add('isActive')
+    sliderImg[img].classList.add('isVisible')
+    sliderBtn[img].classList.add('isActive')
 }
 
-sliderNext.addEventListener(`click` , ()=>{
+//Funcion para avanzar automáticamente las imagenes
+let autoSlide = () => {
     img++
-    if( img >= 5){
+    if (img >= sliderImg.length) {
         img = 0
     }
     imagenVisible()
-})
+}
 
-sliderPrev.addEventListener(`click` , ()=>{
-    img--
-    if(img < 0 ){
-        img = 4
+//botón "Siguiente"
+sliderNext.addEventListener('click', () => {
+    img++
+    if (img >= sliderImg.length) {
+        img = 0
     }
     imagenVisible()
+    resetAutoSlide() // Reinicia el intervalo al hacer clic
 })
 
-sliderBtn.forEach( (i)=>{
-    sliderBtn[i].addEventListener(`click` , ()=>{
+//botón "Anterior"
+sliderPrev.addEventListener('click', () => {
+    img--
+    if (img < 0) {
+        img = sliderImg.length - 1
+    }
+    imagenVisible()
+    resetAutoSlide() // Reinicia el intervalo al hacer clic
+})
+
+//botones de los indicadores
+sliderBtn.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
         img = i
         imagenVisible()
+        resetAutoSlide() // Reinicia el intervalo al hacer clic
     })
 })
+
+//intervalo automático
+let slideInterval = setInterval(autoSlide, 3000) // Cambia de imagen cada 3 segundos
+
+//reiniciar el intervalo automático
+let resetAutoSlide = () => {
+    clearInterval(slideInterval) // Detiene el intervalo actual
+    slideInterval = setInterval(autoSlide, 3000) // Inicia uno nuevo
+}
