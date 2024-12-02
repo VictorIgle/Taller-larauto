@@ -237,6 +237,16 @@ body{
     align-items: center;
 }
 
+.Info-block.left{
+    align-items: flex-start;
+    text-align: left;
+}
+
+.Info-block.right{
+    align-items: flex-end;
+    text-align: right;
+}
+
 .Info-span{}
 .Info-span--end{}
 .Info-h2{}
