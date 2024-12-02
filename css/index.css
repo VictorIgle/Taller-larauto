@@ -58,6 +58,7 @@ form , input , label , select , option , textarea , button{
 }
 body{
     font-family: var(--font-primary) ;
+
 }
 
 
@@ -224,15 +225,16 @@ body{
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 3rem 3rem;
-    color: var(--color-primary);
+    padding: 3rem 0 1rem 0;
 
+    color: var(--color-primary);
     
+
 }
 .Info-block{
     width: 30%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
@@ -240,24 +242,41 @@ body{
 .Info-block.left{
     align-items: flex-start;
     text-align: left;
-    margin-left: 26rem;
+    padding-left: calc((416 / 2047)* 100%);
+    white-space: nowrap;
 }
 
 .Info-block.center{
-    padding: 0 9.3125rem 0 9.3125rem;
 }
 
 .Info-block.right{
     align-items: flex-end;
     text-align: right;
-    margin-right: 26rem;
+    padding-right: calc((416 / 2047)* 100%);
     
 }
 
-.Info-span{}
-.Info-span--end{}
-.Info-h2{}
-.Info-h3{}
+
+
+.Info-span{
+    line-height: 1.5rem;
+}
+
+.Info-span--end{
+    margin: 2rem 0;
+    
+}
+.Info-h2{
+    line-height: 2rem;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.Info-h3{
+    font-size: 2em;
+}
+
+
+
 
 
 
@@ -283,5 +302,39 @@ body{
     }
 }
 
+@media (max-width: 1500px){
+    .Info-block.right , .Info-block.left {
+        padding: 0;
+        
+    }
+}
+
+@media (max-width: 960px){
+    .Info , .Info-block , .Info-block.center , .Info-block.left , .Info-block.right{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        margin:3.1875rem 0 0 0;
+        padding: 0 0 2.5rem;
+
+    }
+}
+
+@media (max-width: 960px) {
+    .Info{
+        overflow-x: auto;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 300px){
+    .Info-span{
+        white-space: normal;
+        word-wrap: break-word;
+    }
+}
 
 
