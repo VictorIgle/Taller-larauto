@@ -217,6 +217,34 @@ body{
 
 
 
+.Info{
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 3rem;
+    color: var(--color-primary);
+
+    
+}
+.Info-block{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Info-span{}
+.Info-span--end{}
+.Info-h2{}
+.Info-h3{}
+
+
+
+
 
 
 
