@@ -222,7 +222,7 @@ body{
     background-color: var(--bg-color);
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 3rem 3rem;
     color: var(--color-primary);
@@ -240,11 +240,18 @@ body{
 .Info-block.left{
     align-items: flex-start;
     text-align: left;
+    margin-left: 26rem;
+}
+
+.Info-block.center{
+    padding: 0 9.3125rem 0 9.3125rem;
 }
 
 .Info-block.right{
     align-items: flex-end;
     text-align: right;
+    margin-right: 26rem;
+    
 }
 
 .Info-span{}
