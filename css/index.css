@@ -44,9 +44,11 @@ form , input , label , select , option , textarea , button{
 
     /* Color */
     --color-primary: white;
+    --color-secondary:#5C5C5D;
     --color-hover:#F29400;
     --bg-hover:#ED6600;
     --bg-color:#F29400;
+    --bg-color-second:#ECECEC;
 
     /* Tipografías */
     --font-primary : Helvetica, Arial;
@@ -273,6 +275,96 @@ body{
 
 
 
+.Services{
+    max-width: 75rem;
+    margin: auto;
+    text-align: center; /* Alinea el texto al centro */
+    padding: 1.25rem;
+}
+
+.Services-title{
+    margin-bottom: 1.25rem;
+}
+
+.Services-h2{
+    margin: 2rem 0 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--bg-hover);
+    position: relative;
+}
+
+.Services-h2::after{
+    content: ""; 
+    display: block;
+    max-width: 100%; 
+    min-height: 1px;
+    background-color:var(--bg-hover);
+    margin: 1rem auto 2.9375rem;
+}
+
+.Services-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: auto;
+    gap: 1.5rem;
+    margin:0 0 3rem; 
+}
+
+.Services-container{
+    height: 100%;
+    background-color: var(--bg-color-second);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Services-svg{
+    width: 3.3rem;
+    background-color: var(--bg-color);
+    margin: auto;
+    border-radius: 50%;
+    color: var(--color-primary);
+}
+
+.Services-h3{
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+.Services-p{
+    text-align: center;
+    font-size: 1em;
+    color: var(--color-secondary);
+}
+
+.Services-btn{
+    width: 100%;
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+.Services-btn:hover{
+    background-color: var(--bg-hover);
+}
+
+
+.Services-all{
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    color: var(--color-primary);
+}
+
+
+
+
+
 
 
 
@@ -294,6 +386,13 @@ body{
     }
     .Header-h1{
         padding:1rem;
+    }
+}
+
+@media (max-width: 990px){
+    .Services-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 1.5rem;
     }
 }
 
@@ -321,6 +420,13 @@ body{
 @media (max-width:600px){
     .Slider-ul{
         bottom: .5rem;
+    }
+}
+
+@media (max-width:580px){
+    .Services-grid{
+        grid-template-columns: repeat(1, 1fr);
+        
     }
 }
 
