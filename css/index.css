@@ -65,7 +65,7 @@ body{
 
 
 
-
+/*Cabecera*/
 
 
 .Header{
@@ -118,7 +118,6 @@ body{
     cursor: pointer;
 }
 
-
 .Header-li:nth-child(1)::after,
 .Header-li:nth-child(2)::after,
 .Header-li:nth-child(4)::after {
@@ -138,6 +137,11 @@ body{
 .Header-li:hover::after{
     color:var(--bg-color);
 }
+
+
+
+
+/*Slider de imagenes*/
 
 .Slider{
     width: 100%;
@@ -218,7 +222,7 @@ body{
 }
 
 
-
+/*Informacion de contacto y horarios*/
 
 .Info{
     width: 100%;
@@ -273,13 +277,16 @@ body{
 }
 
 
-
+/*Servicios*/
 
 .Services{
     max-width: 75rem;
     margin: auto;
     text-align: center; /* Alinea el texto al centro */
     padding: 1.25rem;
+    overflow: visible;
+
+    position: relative;
 }
 
 .Services-title{
@@ -346,7 +353,9 @@ body{
 .Services-btn{
     width: 100%;
     background-color: var(--bg-color);
+    margin:0 0 2rem;
     padding: 1rem;
+    color: var(--color-primary);
     cursor: pointer;
 }
 
@@ -354,23 +363,113 @@ body{
     background-color: var(--bg-hover);
 }
 
-.Services-all{
+.Services--second{
     width: 100%;
+    background-color: var(--bg-color-second);
+}
+
+.Services-grid--second{
+    max-width: 75rem;
+    background-color: var(--bg-color-second);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem 0 1rem;
+    gap: 2rem;
     margin: auto;
-    padding: 1rem;
-    color: var(--color-primary);
 }
 
 
 
 
 
+/*Consejo*/
+
+.Advice{
+    max-width: 75rem;
+    margin: 4rem auto;
+    padding: 1rem;
+}
+.Advice-h2{
+    margin: 2rem 0 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--bg-hover);
+    position: relative;
+}
+
+.Advice-h2::after{
+    content: ""; 
+    display: block;
+    max-width: 100%; 
+    min-height: 1px;
+    background-color:var(--bg-hover);
+    margin: 1rem auto 2.9375rem;
+}
+
+.Advice-img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.Advice-bg{
+    background-color: var(--bg-color);
+    border-bottom: solid 1px var(--bg-color);
+}
+
+.Advice-h3{
+    padding: 1rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-primary);
+
+}
+.Advice-p{
+    background-color:white;
+    padding:1rem;
+   margin: 1px;
+   color: var(--color-secondary);
+   line-height: 1.2rem;
+}
+
+
+
+
+
+/*Mapa*/
+
+.Map{
+    width: 100%;
+    max-height: 37.625rem;
+    margin: 3rem 0 0;
+}
+
+.Map-img{
+    width: 100%;
+    max-height: 37.625rem;
+    object-fit: cover;
+}
+
+
+
+
+
+                
 
 
 
 
 
 
+
+
+
+
+
+
+/*Responsive*/
 
 
 @media (max-width: 1500px){
@@ -415,6 +514,12 @@ body{
         margin: auto;
     }
 
+}
+
+@media (max-width:770px){
+    .Services-grid--second{
+        flex-flow: row wrap;
+    }
 }
 
 @media (max-width:600px){
