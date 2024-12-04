@@ -100,6 +100,12 @@ body{
     
 }
 
+.Header-svg{
+    display: none;
+    margin: 1rem 0 1rem 1rem;
+    color: var(--color-secondary);
+}
+
 .Header-ul{
     display: flex;
     flex-flow: row nowrap;
@@ -109,8 +115,14 @@ body{
     gap: 1rem;
     margin: auto 0;
     font-size: .88em;
-    
+
+    transition: all .5s ease-in-out;
 }
+
+.Header-ul.Isactive{
+    display: block;
+}
+
 .Header-li{
     display: flex;
     padding: .5rem 1rem;
@@ -485,6 +497,9 @@ body{
     }
     .Header-h1{
         padding:1rem;
+    }
+    .Header-svg{
+        display: block;
     }
 }
 
