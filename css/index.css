@@ -468,6 +468,104 @@ body{
 
 
 
+/*Formulario*/
+
+.Offers{
+    background-color: var(--bg-color);
+    padding: 2rem 2rem;
+}
+
+.Offers-container {
+    max-width: 75rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: .5rem;
+    margin: auto;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.Offers-h2{
+    margin: 1rem 0 0;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+.Offers-span{
+    font-size:1.3em ;
+}
+
+.Offer-form{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    gap: 1rem; 
+}
+
+.Offer-fields {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0 2.75rem;
+    gap: 1rem;
+    text-align: left;
+}
+
+.Offer-plh {
+    width: 23.25rem;
+    background-color: var(--color-primary);
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+}
+
+.Offer-terms {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 2.75rem;
+    padding: 0 0 2rem 0;
+    gap: .5rem;
+    text-align: left;
+}
+
+/* Estilos para el checkbox */
+
+
+/* Estilos para los enlaces */
+.Offer-terms a {
+    display: inline;
+    text-decoration: underline;
+}
+
+.Offer-terms a:hover {
+    text-decoration: none;
+}
+
+/* Estilo para el botón de envío */
+.Offer-submit{
+    background-color: var(--bg-color);
+    margin: auto;
+    padding: 1rem 9.5625rem;
+    border: solid 2px var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+
+    transition: background-color .3s ease-in-out;
+    
+}
+
+.Offer-submit:hover{
+    background-color: var(--bg-hover);
+    color: var(--color-hover);
+    border:none;
+}
+
+
+
 
 
                 
