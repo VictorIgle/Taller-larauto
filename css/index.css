@@ -97,10 +97,13 @@ body{
     display: flex;
     flex-flow: column;
     min-height: 2.8125rem;
+
+    position: relative;
     
 }
 
 .Header-svg{
+    width: 2.5rem;
     display: none;
     margin: 1rem 0 1rem 1rem;
     color: var(--color-secondary);
@@ -116,11 +119,6 @@ body{
     margin: auto 0;
     font-size: .88em;
 
-    transition: all .5s ease-in-out;
-}
-
-.Header-ul.Isactive{
-    display: block;
 }
 
 .Header-li{
@@ -128,6 +126,8 @@ body{
     padding: .5rem 1rem;
     color: #666668;
     cursor: pointer;
+
+    position: relative;
 }
 
 .Header-li:nth-child(1)::after,
@@ -149,6 +149,8 @@ body{
 .Header-li:hover::after{
     color:var(--bg-color);
 }
+
+
 
 
 
@@ -493,7 +495,14 @@ body{
 
 @media (max-width: 1000px){
     .Header-ul{
-        display: none;
+        max-height: 0;
+        display: flex;
+        flex-direction: column; /* Siempre columna por defecto */
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
     .Header-h1{
         padding:1rem;
@@ -501,6 +510,30 @@ body{
     .Header-svg{
         display: block;
     }
+    .Header-ul.Isactive{
+        max-height: 30vh;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 0 1rem 0;
+        
+    }
+    .Header-li{
+        width: 100%;
+        border-bottom: solid 1px var(--bg-hover);
+        margin: 0 .5rem;
+    }
+    .Header-li:nth-child(1){
+        padding-top: 1rem;
+        border-top: solid 1px var(--bg-hover);
+    }
+    .Header-ul li::after {
+        position: absolute;
+        right: 1rem;
+    }
+   
+    
+    
 }
 
 @media (max-width: 990px){

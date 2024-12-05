@@ -3,10 +3,13 @@
 
 const menuNav = document.querySelector('.Header-svg')
 const ulNav = document.querySelector('.Header-ul')
+
 const sliderNext = document.querySelector('.Slider-arrow--next')
 const sliderPrev = document.querySelector('.Slider-arrow--prev')
+
 const sliderBtn = document.querySelectorAll('.Slider-btn')
 const sliderImg = document.querySelectorAll('.Slider-img')
+
 const slider = document.querySelector('.Slider')
 
 let img = 0
@@ -14,6 +17,7 @@ let img = 0
 
 menuNav.addEventListener('click' , ()=>{
     ulNav.classList.toggle('Isactive')
+   
 })
 
 //actualizar la imagen visible
