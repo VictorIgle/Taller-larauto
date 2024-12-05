@@ -499,13 +499,13 @@ body{
 }
 
 .Offer-form{
+    max-width: 75rem;
     display: flex;
     flex-flow: column;
-    width: 100%;
     gap: 1rem; 
 }
 
-.Offer-fields {
+.Offer-fields{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -514,14 +514,14 @@ body{
     text-align: left;
 }
 
-.Offer-plh {
-    width: 23.25rem;
+.Offer-plh{
+    width: 100%;
     background-color: var(--color-primary);
     padding: 1rem 3rem;
     margin: 2rem 0;
 }
 
-.Offer-terms {
+.Offer-terms{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -534,14 +534,39 @@ body{
 
 /* Estilos para el checkbox */
 
+.Offer-button{
+    width: 1rem; 
+    height: 1rem; 
+    background-color: var(--color-primary);
+    cursor: pointer;
+    position: relative;
+
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.Offer-button.Isactive{
+    background-color: var(--bg-hover); 
+    
+}
+
+.Offer-button.Isactive::after{
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+}
+
 
 /* Estilos para los enlaces */
-.Offer-terms a {
+.Offer-terms a{
     display: inline;
     text-decoration: underline;
 }
 
-.Offer-terms a:hover {
+.Offer-terms a:hover{
     text-decoration: none;
 }
 
@@ -630,6 +655,7 @@ body{
         right: 1rem;
     }
    
+   
     
     
 }
@@ -638,6 +664,12 @@ body{
     .Services-grid{
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem 1.5rem;
+    }
+    .Offer-fields{
+        flex-flow: column;
+    }
+    .Offer-plh{
+        margin: .5rem;
     }
 }
 
@@ -654,7 +686,7 @@ body{
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 960px){
     .Info{
         overflow-x: auto;
         margin: auto;
@@ -679,6 +711,16 @@ body{
         grid-template-columns: repeat(1, 1fr);
         
     }
+}
+
+@media (max-width:500px){
+    .Offer-submit{
+        padding: 1rem 30%;
+    }
+    .Offer-plh{
+        padding: 1rem .2rem;
+    }
+    
 }
 
 @media (max-width: 300px){

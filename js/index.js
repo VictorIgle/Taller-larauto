@@ -12,6 +12,8 @@ const sliderImg = document.querySelectorAll('.Slider-img')
 
 const slider = document.querySelector('.Slider')
 
+const checkBtn = document.querySelector('.Offer-button')
+
 let img = 0
 
 
@@ -77,3 +79,11 @@ let resetAutoSlide = () => {
     clearInterval(slideInterval) // Detiene el intervalo actual
     slideInterval = setInterval(autoSlide, 3000) // Inicia uno nuevo
 }
+
+//evitar la navegacion con el button del formulario
+checkBtn.addEventListener('click' , (event)=>{
+    event.preventDefault()
+    checkBtn.classList.toggle('Isactive')
+    
+
+})
