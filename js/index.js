@@ -26,18 +26,21 @@ menuNav.addEventListener('click' , ()=>{
 })
 
 //Abre y cierra submenus
-headerItems.forEach((item, index) => {
+headerItems.forEach((item) => {
     item.addEventListener('click', (event) => {
       event.stopPropagation()
   
-      const subMenu = subMenus[index];
+      // Buscar el submenú dentro del item clicado
+      const subMenu = item.querySelector('.Sublist-ul')
   
-      
-      subMenu.classList.toggle('Open')
+      // Si hay un submenú, alternar la clase 'Open'
+      if (subMenu) {
+        subMenu.classList.toggle('Open')
+      }
   
-     
-      subMenus.forEach((otherSubMenu, otherIndex) => {
-        if (otherIndex !== index) {
+      // Cerrar los demás submenús
+      subMenus.forEach((otherSubMenu) => {
+        if (otherSubMenu !== subMenu) {
           otherSubMenu.classList.remove('Open')
         }
       })
@@ -47,7 +50,7 @@ headerItems.forEach((item, index) => {
   // Cerrar todos los submenús cuando se haga clic fuera de los menús
   document.addEventListener('click', () => {
     subMenus.forEach(subMenu => {
-      subMenu.classList.remove('Open');
+      subMenu.classList.remove('Open')
     })
   })
 
