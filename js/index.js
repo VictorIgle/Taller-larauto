@@ -3,7 +3,7 @@
 
 const menuNav = document.querySelector('.Header-svg')
 const ulNav = document.querySelector('.Header-ul')
-const parentItems = document.querySelectorAll('.Header-li');
+const headerItems = document.querySelectorAll('.Header-li');
 const subMenus = document.querySelectorAll('.Sublist-ul')
 
 const sliderNext = document.querySelector('.Slider-arrow--next')
@@ -26,21 +26,31 @@ menuNav.addEventListener('click' , ()=>{
 })
 
 //Abre y cierra submenus
-parentItems.forEach((parent, i) => {
-    const subMenu = subMenus[i]
-    
-    parent.addEventListener('click', () => {
-        
-        subMenus.forEach((menu) => {
-            if (menu !== subMenu) {
-                menu.classList.remove('Open')
-            }
-        })
-
-        
-        subMenu.classList.toggle('Open');
+headerItems.forEach((item, index) => {
+    item.addEventListener('click', (event) => {
+      event.stopPropagation()
+  
+      const subMenu = subMenus[index];
+  
+      
+      subMenu.classList.toggle('Open')
+  
+     
+      subMenus.forEach((otherSubMenu, otherIndex) => {
+        if (otherIndex !== index) {
+          otherSubMenu.classList.remove('Open')
+        }
+      })
     })
-})
+  })
+  
+  // Cerrar todos los submenús cuando se haga clic fuera de los menús
+  document.addEventListener('click', () => {
+    subMenus.forEach(subMenu => {
+      subMenu.classList.remove('Open');
+    })
+  })
+
 
 //actualizar la imagen visible
 let imagenVisible = () => {
