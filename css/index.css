@@ -88,8 +88,6 @@ body{
     font-size: 1.3em;
     font-weight:800;
     letter-spacing: 0.5px;
-
-    
 }
 
 .Header-nav{
@@ -165,6 +163,7 @@ body{
 }
 
 .Slider-container{
+    width: 100%;
     position: relative;
 }
 
@@ -686,6 +685,12 @@ body{
     .Footer-wrapper{
         width: 100%;
         padding: 0 2rem;
+    }
+}
+
+@media (max-width: 1200px){
+    .Slider-img{
+        min-height: 25rem;
     }
 }
 
