@@ -574,14 +574,17 @@ body{
 
 /* Estilo para el botón de envío */
 .Offer-input{
-    background-color: var(--color-primary);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     margin: auto;
 }
 .Offer-submit{
     background-color: var(--bg-color);
     padding: 1rem 9.5625rem;
-    margin: 1.8px;
     color: var(--color-primary);
+    border: solid 2px var(--color-primary);
     cursor: pointer;
 
     transition: background-color .3s ease-in-out;
@@ -591,7 +594,7 @@ body{
 .Offer-submit:hover{
     background-color: var(--bg-hover);
     color: var(--color-hover);
-    margin:auto;
+    border: none;
 }
 
 
@@ -760,6 +763,10 @@ body{
     .Info{
         overflow-x: auto;
         margin: auto;
+    }
+    .Offer-submit{
+        width: 100%;
+        margin: 0 2rem;
     }
 
 }
