@@ -14,6 +14,7 @@ const slider = document.querySelector('.Slider')
 
 const checkBtn = document.querySelector('.Offer-button')
 
+
 let img = 0
 
 
@@ -84,6 +85,4 @@ let resetAutoSlide = () => {
 checkBtn.addEventListener('click' , (event)=>{
     event.preventDefault()
     checkBtn.classList.toggle('Isactive')
-    
-
 })

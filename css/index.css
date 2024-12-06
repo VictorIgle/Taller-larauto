@@ -45,10 +45,12 @@ form , input , label , select , option , textarea , button{
     /* Color */
     --color-primary: white;
     --color-secondary:#5C5C5D;
+    --color-tertiary:#D9D9D9;
     --color-hover:#F29400;
     --bg-hover:#ED6600;
     --bg-color:#F29400;
     --bg-color-second:#ECECEC;
+    --bg-color-foot:#3C3C3B;
 
     /* Tipografías */
     --font-primary : Helvetica, Arial;
@@ -571,11 +573,14 @@ body{
 }
 
 /* Estilo para el botón de envío */
+.Offer-input{
+    background-color: var(--color-primary);
+    margin: auto;
+}
 .Offer-submit{
     background-color: var(--bg-color);
-    margin: auto;
     padding: 1rem 9.5625rem;
-    border: solid 2px var(--color-primary);
+    margin: 1.8px;
     color: var(--color-primary);
     cursor: pointer;
 
@@ -586,7 +591,65 @@ body{
 .Offer-submit:hover{
     background-color: var(--bg-hover);
     color: var(--color-hover);
-    border:none;
+    margin:auto;
+}
+
+
+
+
+
+/*Footer*/
+.Footer{
+    width: 100%;
+    background-color: var(--bg-color-foot);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    color: var(--color-tertiary);
+}
+.Footer-container{
+    width:100%;
+    
+}
+
+.Footer-wrapper{
+   width: 75rem;
+   margin: auto;
+   padding:0 2rem;
+}
+
+.Footer-h2{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+.Footer-ul{
+    margin: 0 0 3rem;
+}
+.Footer-li{
+    padding: .3rem 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.Footer-li:hover{
+    color: var(--color-hover);
+    text-decoration: none;
+}
+
+.Footer-copyright{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0;
+    padding: 1rem 0 0;
+    border-top: solid 1px var(--color-primary);
+}
+.Footer-span{
+    font-size: .9em;
 }
 
 
@@ -613,6 +676,13 @@ body{
     .Info-block.right , .Info-block.left {
         padding: 0;
         
+    }
+}
+
+@media (max-width:1300px){
+    .Footer-wrapper{
+        width: 100%;
+        padding: 0 2rem;
     }
 }
 
@@ -697,6 +767,9 @@ body{
 @media (max-width:770px){
     .Services-grid--second{
         flex-flow: row wrap;
+    }
+    .Footer{
+        text-align: center;
     }
 }
 
