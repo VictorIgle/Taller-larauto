@@ -33,12 +33,12 @@ parentItems.forEach((parent, i) => {
         
         subMenus.forEach((menu) => {
             if (menu !== subMenu) {
-                menu.classList.remove('open')
+                menu.classList.remove('Open')
             }
         })
 
         
-        subMenu.classList.toggle('open');
+        subMenu.classList.toggle('Open');
     })
 })
 

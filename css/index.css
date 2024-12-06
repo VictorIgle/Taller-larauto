@@ -765,30 +765,30 @@ body{
         position: absolute;
         right: 1rem;
     }
-    .Sublist-ul {
-        display: none; /* Oculto por defecto */
-        background-color: #f9f9f9; /* Fondo del submenú */
-        width: 100%; /* Ocupa todo el ancho del menú principal */
-        padding: 0; /* Sin relleno adicional */
-        position: absolute; /* Posición relativa al <li> padre */
-        top: 100%; /* Coloca el submenú justo debajo del <li> padre */
-        left: 0; /* Alinea el submenú con el inicio del <li> padre */
+    .Sublist-ul{
+        display: none;
+        background-color: #f9f9f9; 
+        width: 100%; 
+        padding: 0; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
         z-index: 1;
     }
 
-    .Sublist-ul.Open {
-        display: block; /* Se muestra al estar activo */
+    .Sublist-ul.Open{
+        display: block;
     }
 
-    .Sublist-li {
-        padding: 0.5rem 1rem; /* Espaciado interno */
-        border-top: 1px solid #e0e0e0; /* Línea separadora entre elementos */
-        width: 100%; /* Ocupa todo el ancho */
+    .Sublist-li{
+        padding: 0.5rem 1rem; 
+        border-top: 1px solid #e0e0e0; 
+        width: 100%; 
     }
 
-    .Sublist-li:hover {
-        background-color: var(--bg-hover); /* Fondo al pasar el ratón */
-        color: var(--bg-color); /* Cambia el color del texto */
+    .Sublist-li:hover{
+        background-color: var(--bg-hover); 
+        color: var(--bg-color); 
     }
 }
    
