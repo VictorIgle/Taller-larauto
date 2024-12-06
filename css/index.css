@@ -748,7 +748,8 @@ body{
         flex-flow: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 0 0 1rem 0;
+        padding: 1rem 0;
+        gap: 0;
         
     }
     .Header-li{
