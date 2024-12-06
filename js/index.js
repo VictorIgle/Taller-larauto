@@ -3,6 +3,8 @@
 
 const menuNav = document.querySelector('.Header-svg')
 const ulNav = document.querySelector('.Header-ul')
+const parentItems = document.querySelectorAll('.Header-li');
+const subMenus = document.querySelectorAll('.Sublist-ul')
 
 const sliderNext = document.querySelector('.Slider-arrow--next')
 const sliderPrev = document.querySelector('.Slider-arrow--prev')
@@ -17,10 +19,27 @@ const checkBtn = document.querySelector('.Offer-button')
 
 let img = 0
 
-
+//Abre el menu
 menuNav.addEventListener('click' , ()=>{
     ulNav.classList.toggle('Isactive')
    
+})
+
+//Abre y cierra submenus
+parentItems.forEach((parent, i) => {
+    const subMenu = subMenus[i]
+    
+    parent.addEventListener('click', () => {
+        
+        subMenus.forEach((menu) => {
+            if (menu !== subMenu) {
+                menu.classList.remove('open')
+            }
+        })
+
+        
+        subMenu.classList.toggle('open');
+    })
 })
 
 //actualizar la imagen visible
