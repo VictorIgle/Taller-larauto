@@ -162,6 +162,10 @@ body{
     z-index: 1;
 }
 
+.Sublist-ul.Open{
+        display: block;
+    }
+
 .Sublist-li{
     background-color: transparent;
     padding: 0.5rem 1rem; 
